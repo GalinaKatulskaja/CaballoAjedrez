@@ -31,7 +31,12 @@ public class Posicion {
         this.fila=copia.fila;
         this.columna=copia.columna;
     }
-
+     /**Crea los métodos get y set para los atributos. Recuerda que para 
+     el método set se debe tener en cuenta que los valores son correctos 
+     (las filas van del 1 al 8 -ambos inclusive- y las columnas de
+     la 'a' a la 'h' -ambos inclusive-)  y si no se lance una excepción del
+     tipo IllegalArgumentException con el mensaje adecuado y no modifique los
+        atributos.*/
     public int getFila() {
         return fila;
     }
@@ -93,12 +98,12 @@ public class Posicion {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Posicion{" + "fila=" + fila + ", columna=" + columna + '}';
+    }
     
-    /**Crea los métodos get y set para los atributos. Recuerda que para 
-     el método set se debe tener en cuenta que los valores son correctos 
-     (las filas van del 1 al 8 -ambos inclusive- y las columnas de
-     la 'a' a la 'h' -ambos inclusive-)  y si no se lance una excepción del
-     tipo IllegalArgumentException con el mensaje adecuado y no modifique los
-        atributos.*/
+   
     
 }
