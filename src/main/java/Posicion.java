@@ -14,10 +14,22 @@ public class Posicion {
     private int fila;
     private char columna;
     
+    /**
+     * Constructor con parametros fila y columna
+     * @param fila
+     * @param columna 
+     */
     public Posicion(int fila, char columna)
     {
        setFila(fila);
        setColumna(columna);
+    }
+    
+    //el constructor copia para esta clase.
+    public Posicion(Posicion copia)
+    {
+        this.fila=copia.fila;
+        this.columna=copia.columna;
     }
 
     public int getFila() {
