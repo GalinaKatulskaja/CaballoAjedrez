@@ -13,6 +13,12 @@ public class Posicion {
     //con la visibilidad adecuada.
     private int fila;
     private char columna;
+    
+    public Posicion(int fila, char columna)
+    {
+       setFila(fila);
+       setColumna(columna);
+    }
 
     public int getFila() {
         return fila;
