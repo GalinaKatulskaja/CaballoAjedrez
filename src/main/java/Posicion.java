@@ -64,6 +64,36 @@ public class Posicion {
             }
         
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.fila;
+        hash = 89 * hash + this.columna;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Posicion other = (Posicion) obj;
+        if (this.fila != other.fila) {
+            return false;
+        }
+        if (this.columna != other.columna) {
+            return false;
+        }
+        return true;
+    }
+    
     /**Crea los métodos get y set para los atributos. Recuerda que para 
      el método set se debe tener en cuenta que los valores son correctos 
      (las filas van del 1 al 8 -ambos inclusive- y las columnas de
